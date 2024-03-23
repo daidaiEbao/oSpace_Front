@@ -34,7 +34,7 @@ const avaurl = "https://avatars.githubusercontent.com/u/116529629?s=400&u=fbe877
 const title = "Welcome to my own space!";
 const contents = [
     "Hi, I'm @daidaiEbao.",
-    "An M.S. student in Software Engineering.",
+    "An M.S. candidate in Software Engineering.",
     "Now building my blog and learning backend tech.",
     new Date().toLocaleDateString(),
 ];
