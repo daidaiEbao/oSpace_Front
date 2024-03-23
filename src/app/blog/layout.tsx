@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Layout, Divider} from "antd";
+import Link from "next/link";
 
 
 const { Header, Content, Footer }  = Layout;
@@ -44,7 +45,9 @@ const AboutLayout = ({
             <Footer style={footerStyle}>
             <Divider style={{marginTop: 0}} />
             <p>
+            <Link href={"/"} style={{color: 'black', textDecorationLine: 'underline'}}>
             own Space
+            </Link>
             </p>
              <p>
              ©{new Date().getFullYear()} 

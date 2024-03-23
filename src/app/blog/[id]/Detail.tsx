@@ -127,7 +127,7 @@ const Detail : React.FC = (props) => {
         <Divider/>
         
         <div>
-        <Markdown remarkPlugins={[remarkGfm]}>{"contentInfo"}</Markdown>
+        <Markdown remarkPlugins={[remarkGfm]}>{contentInfo}</Markdown>
         </div>
         <div style={{marginTop: 80}}>
             <Row justify={'space-between'}>
