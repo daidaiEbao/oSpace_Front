@@ -27,6 +27,7 @@ const itemStyle: React.CSSProperties = {
     marginTop: 40,
     marginBottom: 40,
     borderRadius: 20,
+    // border: '1px solid #f5f5f5',
 };
 
 const avaurl = "https://avatars.githubusercontent.com/u/116529629?s=400&u=fbe877d48944004fd2a74f128037e8dee9901482&v=4";
@@ -58,11 +59,11 @@ const Welcome: React.FC = (props: any) => {
             ))}
         </div>
 
+        <div style={itemStyle}>
         <Link href={"/about"}>
-        <div style={itemStyle}>  
             {tip}
-        </div>
         </Link>
+        </div>
 
         </div>
         
