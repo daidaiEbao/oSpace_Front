@@ -4,17 +4,32 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { Button } from 'antd';
 
-const About: React.FC = () => {
+const Blog: React.FC = () => {
     const [data, setData] = useState([]);
     const [page, setPage] = useState(1);
 
     useEffect(() => {
-        setData([
-            'Racing car sprays burning fuel into crowd.',
-            'Japanese princess to wed commoner.',
-            'Australian walks 100km after outback crash.',
-            'Man charged over missing wedding girl.',
-            'Los Angeles battles huge wildfires.',
+        setData([{
+            title: 'Racing car sprays burning fuel into crowd.',
+            time: '2024/3/23 18:41:46',
+            id: '10001',
+        }, {
+            title: 'Japanese princess to wed commoner.',
+            time: '2024/3/23 18:41:46',
+            id: '10002',
+        }, {
+            title: 'Australian walks 100km after outback crash.',
+            time: '2024/3/23 18:41:46',
+            id: '10003',
+        }, {
+            title: 'Man charged over missing wedding girl.',
+            time: '2024/3/23 18:41:46',
+            id: '10004',
+        }, {
+            title: 'Los Angeles battles huge wildfires.',
+            time: '2024/3/23 18:41:46',
+            id: '10005',
+        },
         ]);
     }, []);
     const onClick = () => {
@@ -22,7 +37,7 @@ const About: React.FC = () => {
         setPage(prePage => {
             prePage++;
             console.log(prePage);
-            setData([...data, 'xxxxxxxxxxxx']);
+            setData([...data, {title: 'xxxxxxxxxxxx', time: '2024/3/23 18:41:46', id: '10006'}]);
             return prePage;
         });
         
@@ -36,13 +51,13 @@ const About: React.FC = () => {
                 <div key={idx} style={{marginTop: 80, marginBottom: 80}}>
                     
                     <h3 style={{fontSize: 24, fontStyle: 'italic'}}>
-                    <Link href='/' style={{color: 'black'}}>
-                        {val}
+                    <Link href={`/blog/${val.id}`} style={{color: 'black'}}>
+                        {val.title}
                      </Link> 
                     </h3>
                     
                     <p>
-                        {new Date().toLocaleString()}
+                        {val.time}
                     </p>
                 </div>
             ))}
@@ -56,4 +71,4 @@ const About: React.FC = () => {
     );
 }
 
-export default About; 
+export default Blog; 

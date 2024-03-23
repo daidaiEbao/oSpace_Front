@@ -60,7 +60,7 @@ const Welcome: React.FC = (props: any) => {
         </div>
 
         <div style={itemStyle}>
-        <Link href={"/about"}>
+        <Link href={"/blog"}>
             {tip}
         </Link>
         </div>

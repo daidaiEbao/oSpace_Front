@@ -17,6 +17,7 @@ const headerStyle: React.CSSProperties = {
 const contentStyle: React.CSSProperties = {
   textAlign: 'center',
   backgroundColor: 'white',
+  minHeight: 650
 };
 
 const footerStyle: React.CSSProperties = {
